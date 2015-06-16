@@ -8,6 +8,7 @@ android:
     - extra-android-m2repository
     - android-19
     
+    
 script:
   - sudo chmod +x gradlew
   - ./gradlew build
