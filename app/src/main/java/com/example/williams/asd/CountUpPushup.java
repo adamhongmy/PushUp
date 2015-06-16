@@ -129,7 +129,7 @@ public class CountUpPushup extends ActionBarActivity implements SensorEventListe
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
     }
-
+gfgf
     protected void onResume() {
         super.onResume();
         mSensorManager.registerListener(this, mSensor,
