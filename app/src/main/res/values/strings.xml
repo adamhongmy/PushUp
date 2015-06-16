@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Push UP</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="start">Start</string>
+    <string name="Records">Daily Records</string>
+    <string name="Settings">Settings</string>
+    <string name="exit">Exit</string>
+    <string name="Back">Back</string>
+    <string name="title_activity_total_push_up">Total PushUp</string>
+    <string name="hello">Hello</string>
+    <string name="title_activity_rest">Rest</string>
+    <string name="title_activity_today_result">Today Result</string>
+    <string name="cont">Continue</string>
+    <string name="title_activity_daily_record">DailyRecord</string>
+    <string name="title_activity_today_goal">TodayGoal</string>
+    <string name="last_push_up">Your last push up was </string>
+    <string name="addOne">+1</string>
+    <string name="addTwo">+3</string>
+    <string name="addThree">+5</string>
+    <string name="todayGoal">Today\'s Goal</string>
+    <string name="title_activity_tutorial">Tutorial</string>
+    <string name="know">Okay, I understand.</string>
+    <string name="title_activity_count_up_pushup">CountUpPushup</string>
+    <string name="complete">Complete</string>
+    <string name="gotohome">Go To Home </string>
+    <string name="pressme">Press Me</string>
+    <string name="title_activity_begineer">Begineer</string>
+    <string name="title_activity_today_goal_begineer">TodayGoalBegineer</string>
+    <string name="title_activity_show_record">ShowRecordActivity</string>
+    <string name="dateText">Date :</string>
+    <string name="freqText">Frequency :</string>
+    <string name="progressText">Progress :</string>
+    <string name="home">Home</string>
+    <string name="tutorial">This is how you do push up.</string>
+    <string name="title_activity_notication">Notification</string>
+    <string name="setNotf">Set Notification</string>
+
+</resources>
