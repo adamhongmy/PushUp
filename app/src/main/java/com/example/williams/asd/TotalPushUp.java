@@ -255,14 +255,6 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
     }
 
     public void btnMute(View v){
-        if (pushUpSong.isPlaying()){
-            btnMute.setPressed(true);
-            pushUpSong.pause();
-        }else{
-            btnMute.setPressed(false);
-            pushUpSong.start();
-        }
-
 
     }
 
