@@ -9,7 +9,6 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +22,7 @@ import java.util.TimerTask;
 
 
 public class TotalPushUp extends ActionBarActivity implements SensorEventListener {
+
     private SensorManager mSensorManager;
     private Sensor mSensor;
     private int i = 10;
@@ -40,6 +40,11 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
     private MediaPlayer pushUpSong;
     private MediaPlayer redButtonSound;
     private MediaPlayer restButtonSound;
+
+    private int[] intMusic = {R.raw.dayofsagittarius,
+            R.raw.hexagonforce,
+            R.raw.jumper};
+    private int curMusic = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,10 +73,12 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
 
         redButtonSound = MediaPlayer.create(TotalPushUp.this, R.raw.coins_collect_01);
         restButtonSound = MediaPlayer.create(TotalPushUp.this, R.raw.collect_diamonds_01);
-        pushUpSong = MediaPlayer.create(TotalPushUp.this, R.raw.dayofsagittarius);
+
+        /*pushUpSong = MediaPlayer.create(TotalPushUp.this, R.raw.dayofsagittarius);
         pushUpSong.start();
-        pushUpSong.setLooping(true);
-        Log.d("test", R.raw.dayofsagittarius + ", " + R.raw.harehareyukai);
+        pushUpSong.setLooping(true);*/
+
+        playMusic();
 
         if(targetSet == counter){
             TextView finalSet = (TextView) findViewById(R.id.textView99);
@@ -83,6 +90,19 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
 
     }
 
+    private void playMusic() {
+        int musicPlay = intMusic[curMusic];
+        if (pushUpSong != null) {
+            pushUpSong.stop();
+        }
+        pushUpSong = MediaPlayer.create(TotalPushUp.this, musicPlay);
+        pushUpSong.start();
+        pushUpSong.setLooping(true);
+        curMusic++;
+        if(curMusic > 2) {
+            curMusic = 0;
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -239,7 +259,7 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
     }
 
     public void btnNext(View v){
-
+        playMusic();
     }
     public static void setTargetSet(int targetSet) {
         TotalPushUp.targetSet = targetSet;
