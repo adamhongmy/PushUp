@@ -245,7 +245,6 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
 
     public void btnMute(View v){
 
-
     }
 
     public void btnNext(View v){
