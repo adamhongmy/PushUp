@@ -91,17 +91,6 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
     }
 
     private void playMusic() {
-        int musicPlay = intMusic[curMusic];
-        if (pushUpSong != null) {
-            pushUpSong.stop();
-        }
-        pushUpSong = MediaPlayer.create(TotalPushUp.this, musicPlay);
-        pushUpSong.start();
-        pushUpSong.setLooping(true);
-        curMusic++;
-        if(curMusic > 2) {
-            curMusic = 0;
-        }
     }
 
     @Override
