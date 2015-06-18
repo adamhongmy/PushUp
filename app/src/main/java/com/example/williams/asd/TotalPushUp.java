@@ -1,6 +1,5 @@
 package com.example.williams.asd;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.hardware.Sensor;
@@ -8,8 +7,9 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,6 +35,7 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
     private static int click = 1;//
     private RelativeLayout totalPushUpLayout;
     private Button redButton;
+    private Button btnMute;
     private TextView txt;
     private MediaPlayer pushUpSong;
     private MediaPlayer redButtonSound;
@@ -48,6 +49,7 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         totalPushUpLayout = (RelativeLayout) findViewById(R.id.totalPushUp);
         redButton = (Button) findViewById(R.id.btnRedButton);
+        btnMute = (Button) findViewById(R.id.btnMute);
 
         txt = (TextView) findViewById(R.id.textView99);
         Intent intent = getIntent();
@@ -69,6 +71,7 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
         pushUpSong = MediaPlayer.create(TotalPushUp.this, R.raw.dayofsagittarius);
         pushUpSong.start();
         pushUpSong.setLooping(true);
+        Log.d("test", R.raw.dayofsagittarius + ", " + R.raw.harehareyukai);
 
         if(targetSet == counter){
             TextView finalSet = (TextView) findViewById(R.id.textView99);
@@ -142,7 +145,7 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
                 pushUpSong.pause();
                 startActivity(intent);
             }
-        }else if(targetSet == counter){
+        }else{
             lastSet--;
              txt.setText(String.valueOf(lastSet));
             if (lastSet == 0) {
@@ -231,7 +234,13 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
         countPushup();
     }
 
+    public void btnMute(View v){
 
+    }
+
+    public void btnNext(View v){
+
+    }
     public static void setTargetSet(int targetSet) {
         TotalPushUp.targetSet = targetSet;
     }
