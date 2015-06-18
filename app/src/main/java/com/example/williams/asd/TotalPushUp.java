@@ -1,6 +1,5 @@
 package com.example.williams.asd;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.hardware.Sensor;
@@ -8,8 +7,8 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -142,7 +141,7 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
                 pushUpSong.pause();
                 startActivity(intent);
             }
-        }else if(targetSet == counter){
+        }else{
             lastSet--;
              txt.setText(String.valueOf(lastSet));
             if (lastSet == 0) {
@@ -231,7 +230,13 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
         countPushup();
     }
 
+    public void btnMute(View v){
 
+    }
+
+    public void btnNext(View v){
+
+    }
     public static void setTargetSet(int targetSet) {
         TotalPushUp.targetSet = targetSet;
     }

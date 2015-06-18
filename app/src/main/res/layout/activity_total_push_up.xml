@@ -7,15 +7,25 @@
     tools:context="com.example.williams.asd.TotalPushUp"
     android:id="@+id/totalPushUp">
 
-
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/textView99"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="90dp"/>
+        android:onClick="btnMute"
+        android:background="@drawable/flatorange_selector"
+        android:text="Mute"
+        android:textColor="@android:color/white"
+        android:textSize="23dp"
+        android:id="@+id/btnMute" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnNext"
+        android:background="@drawable/flatgreen_selector"
+        android:layout_alignParentRight="true"
+        android:text="->"
+        android:textColor="@android:color/white"
+        android:textSize="40dp"
+        android:id="@+id/btnNext" />
 
     <Button
         android:layout_width="wrap_content"
