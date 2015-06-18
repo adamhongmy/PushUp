@@ -48,7 +48,6 @@ public class TotalPushUp extends ActionBarActivity implements SensorEventListene
         totalPushUpLayout = (RelativeLayout) findViewById(R.id.totalPushUp);
         redButton = (Button) findViewById(R.id.btnRedButton);
 
-        txt = (TextView) findViewById(R.id.textView99);
         Intent intent = getIntent();
         if (intent.hasExtra("target")){
             String value = intent.getStringExtra("target");
