@@ -17,6 +17,16 @@
         android:textColor="@android:color/white"
         android:textSize="23dp"
         android:id="@+id/btnMute" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textView99"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="90dp"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
